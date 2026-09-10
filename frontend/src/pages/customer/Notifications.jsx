@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import {
-  FaClipboardList, FaHeart, FaKey, FaMapMarkerAlt, FaTachometerAlt, FaUser, FaBell,
   FaCheckDouble,
 } from "react-icons/fa";
 import { useNotifications } from "../../context/NotificationContext";
@@ -8,16 +7,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import EmptyState from "../../components/common/EmptyState";
 import { timeAgo } from "../../utils/helpers";
-
-const NAV = [
-  { to: "/dashboard", label: "Overview", Icon: FaTachometerAlt, end: true },
-  { to: "/orders", label: "My orders", Icon: FaClipboardList },
-  { to: "/wishlist", label: "Wishlist", Icon: FaHeart },
-  { to: "/profile", label: "Profile", Icon: FaUser },
-  { to: "/addresses", label: "Addresses", Icon: FaMapMarkerAlt },
-  { to: "/change-password", label: "Change password", Icon: FaKey },
-  { to: "/notifications", label: "Notifications", Icon: FaBell },
-];
+import { CUSTOMER_NAV } from "../../config/navigation";
 
 const NotificationsPage = () => {
   useDocumentTitle("Notifications");
@@ -26,7 +16,7 @@ const NotificationsPage = () => {
   return (
     <DashboardLayout
       title="Notifications"
-      items={NAV}
+      items={CUSTOMER_NAV}
       loading={false}
       loaderLabel="Loading notifications..."
     >

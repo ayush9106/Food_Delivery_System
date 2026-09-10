@@ -1,22 +1,13 @@
 import { useState } from "react";
 import {
-  FaClipboardList, FaHeart, FaKey, FaMapMarkerAlt, FaTachometerAlt, FaUser, FaBell, FaLock,
+  FaLock,
 } from "react-icons/fa";
 import { toast } from "react-toastify";
 import api from "../../api/client";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import { getErrorMessage } from "../../utils/helpers";
-
-const NAV = [
-  { to: "/dashboard", label: "Overview", Icon: FaTachometerAlt, end: true },
-  { to: "/orders", label: "My orders", Icon: FaClipboardList },
-  { to: "/wishlist", label: "Wishlist", Icon: FaHeart },
-  { to: "/profile", label: "Profile", Icon: FaUser },
-  { to: "/addresses", label: "Addresses", Icon: FaMapMarkerAlt },
-  { to: "/change-password", label: "Change password", Icon: FaKey },
-  { to: "/notifications", label: "Notifications", Icon: FaBell },
-];
+import { CUSTOMER_NAV } from "../../config/navigation";
 
 const ChangePassword = () => {
   useDocumentTitle("Change Password");
@@ -43,7 +34,7 @@ const ChangePassword = () => {
   };
 
   return (
-    <DashboardLayout title="Change Password" items={NAV} loading={false}>
+    <DashboardLayout title="Change Password" items={CUSTOMER_NAV} loading={false}>
       <div className="card max-w-lg p-6">
         <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-orange-500 to-red-500 text-lg text-white shadow-soft">
           <FaLock />

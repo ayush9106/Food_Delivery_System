@@ -10,13 +10,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import StatCard from "../../components/ui/StatCard";
 import { formatINR } from "../../utils/helpers";
-
-export const DELIVERY_NAV = [
-  { to: "/delivery/dashboard", label: "Overview", Icon: FaTachometerAlt, end: true },
-  { to: "/delivery/orders", label: "Available orders", Icon: FaClipboardList },
-  { to: "/delivery/earnings", label: "Earnings", Icon: FaRupeeSign },
-  { to: "/delivery/history", label: "Delivery history", Icon: FaHistory },
-];
+import { DELIVERY_NAV } from "../../config/navigation";
 
 const DeliveryDashboard = () => {
   useDocumentTitle("Delivery Dashboard");

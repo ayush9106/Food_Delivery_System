@@ -1,6 +1,5 @@
 import { useState, useRef } from "react";
 import {
-  FaClipboardList, FaHeart, FaKey, FaMapMarkerAlt, FaTachometerAlt, FaUser, FaBell,
   FaCamera,
 } from "react-icons/fa";
 import { toast } from "react-toastify";
@@ -9,16 +8,7 @@ import { useAuth } from "../../context/AuthContext";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import { getErrorMessage } from "../../utils/helpers";
-
-const NAV = [
-  { to: "/dashboard", label: "Overview", Icon: FaTachometerAlt, end: true },
-  { to: "/orders", label: "My orders", Icon: FaClipboardList },
-  { to: "/wishlist", label: "Wishlist", Icon: FaHeart },
-  { to: "/profile", label: "Profile", Icon: FaUser },
-  { to: "/addresses", label: "Addresses", Icon: FaMapMarkerAlt },
-  { to: "/change-password", label: "Change password", Icon: FaKey },
-  { to: "/notifications", label: "Notifications", Icon: FaBell },
-];
+import { CUSTOMER_NAV } from "../../config/navigation";
 
 const Profile = () => {
   useDocumentTitle("My Profile");
@@ -63,7 +53,7 @@ const Profile = () => {
   };
 
   return (
-    <DashboardLayout title="My Profile" items={NAV} loading={false}>
+    <DashboardLayout title="My Profile" items={CUSTOMER_NAV} loading={false}>
       <div className="card p-6">
         {/* Avatar */}
         <div className="flex flex-col items-center sm:flex-row sm:items-start sm:gap-6">

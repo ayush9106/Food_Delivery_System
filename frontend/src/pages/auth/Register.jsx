@@ -7,6 +7,7 @@ import {
 import { toast } from "react-toastify";
 import { useAuth } from "../../context/AuthContext";
 import { getErrorMessage } from "../../utils/helpers";
+import { roleHome } from "../../config/navigation";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const ROLES = [
@@ -28,9 +29,8 @@ const Register = () => {
     setLoading(true);
     try {
       const user = await register(form);
-      toast.success("Account created! Welcome to Foodie 🎉");
-      const home = user.role === "restaurant_owner" ? "/restaurant/dashboard" : user.role === "delivery_partner" ? "/delivery/dashboard" : "/dashboard";
-      navigate(home, { replace: true });
+      toast.success("Account created! Welcome to Foodie");
+      navigate(roleHome(user.role), { replace: true });
     } catch (err) {
       toast.error(getErrorMessage(err, "Registration failed"));
     } finally {

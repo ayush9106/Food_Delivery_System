@@ -10,15 +10,7 @@ import DashboardLayout from "../../components/layout/DashboardLayout";
 import StatCard from "../../components/ui/StatCard";
 import StatusBadge from "../../components/ui/StatusBadge";
 import { formatINR, formatDate } from "../../utils/helpers";
-
-export const OWNER_NAV = [
-  { to: "/restaurant/dashboard", label: "Dashboard", Icon: FaTachometerAlt, end: true },
-  { to: "/restaurant/manage", label: "My restaurant", Icon: FaStore },
-  { to: "/restaurant/foods", label: "Manage menu", Icon: FaUtensils },
-  { to: "/restaurant/categories", label: "Categories", Icon: FaListAlt },
-  { to: "/restaurant/orders", label: "Orders", Icon: FaClipboardList },
-  { to: "/restaurant/analytics", label: "Analytics", Icon: FaChartBar },
-];
+import { OWNER_NAV } from "../../config/navigation";
 
 const OwnerDashboard = () => {
   useDocumentTitle("Owner Dashboard");

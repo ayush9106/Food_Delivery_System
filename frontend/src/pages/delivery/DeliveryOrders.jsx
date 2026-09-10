@@ -11,7 +11,7 @@ import DashboardLayout from "../../components/layout/DashboardLayout";
 import EmptyState from "../../components/common/EmptyState";
 import StatusBadge from "../../components/ui/StatusBadge";
 import { formatINR, formatDate } from "../../utils/helpers";
-import { DELIVERY_NAV } from "./DeliveryDashboard";
+import { DELIVERY_NAV } from "../../config/navigation";
 
 const DeliveryOrders = () => {
   useDocumentTitle("Available Orders");

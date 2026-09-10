@@ -10,7 +10,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import Modal from "../../components/ui/Modal";
 import { formatINR, formatDate, getErrorMessage } from "../../utils/helpers";
-import { ADMIN_NAV } from "./AdminDashboard";
+import { ADMIN_NAV } from "../../config/navigation";
 
 const EMPTY = {
   title: "", description: "", discountPercent: "", minOrderAmount: "", maxDiscount: "",

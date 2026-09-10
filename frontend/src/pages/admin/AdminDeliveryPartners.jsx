@@ -9,7 +9,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import EmptyState from "../../components/common/EmptyState";
 import { formatINR } from "../../utils/helpers";
-import { ADMIN_NAV } from "./AdminDashboard";
+import { ADMIN_NAV } from "../../config/navigation";
 
 const availabilityBadge = (a) => {
   if (a === "available") return "bg-emerald-50 text-emerald-700";

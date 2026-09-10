@@ -19,17 +19,18 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <NotificationProvider>
               <App />
               <ToastContainer
-                position="top-right"
-                autoClose={3000}
+                position="top-center"
+                autoClose={2500}
                 hideProgressBar={false}
                 newestOnTop
                 closeOnClick
                 rtl={false}
-                pauseOnFocusLoss
+                pauseOnFocusLoss={false}
                 draggable
                 pauseOnHover
                 theme="light"
-                toastClassName="rounded-xl"
+                toastClassName="!rounded-xl !text-sm !shadow-lg"
+                progressClassName="!bg-orange-400"
               />
             </NotificationProvider>
           </WishlistProvider>

@@ -10,7 +10,7 @@ import DashboardLayout from "../../components/layout/DashboardLayout";
 import EmptyState from "../../components/common/EmptyState";
 import StatusBadge from "../../components/ui/StatusBadge";
 import { formatINR, formatDate } from "../../utils/helpers";
-import { ADMIN_NAV } from "./AdminDashboard";
+import { ADMIN_NAV } from "../../config/navigation";
 
 const STATUSES = ["all", "pending", "accepted", "preparing", "out_for_delivery", "delivered", "rejected", "cancelled"];
 

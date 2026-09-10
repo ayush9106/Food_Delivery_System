@@ -10,7 +10,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import EmptyState from "../../components/common/EmptyState";
 import { formatINR, formatDate } from "../../utils/helpers";
-import { ADMIN_NAV } from "./AdminDashboard";
+import { ADMIN_NAV } from "../../config/navigation";
 
 const TABS = [
   { key: "customers", label: "Customers", Icon: FaUserGroup },

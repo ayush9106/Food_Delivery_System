@@ -10,7 +10,7 @@ import DashboardLayout from "../../components/layout/DashboardLayout";
 import Modal from "../../components/ui/Modal";
 import StatusBadge from "../../components/ui/StatusBadge";
 import { getErrorMessage } from "../../utils/helpers";
-import { OWNER_NAV } from "./OwnerDashboard";
+import { OWNER_NAV } from "../../config/navigation";
 
 const EMPTY = {
   name: "", description: "", cuisine: "", address: "", city: "", state: "",

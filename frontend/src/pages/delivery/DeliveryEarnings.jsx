@@ -8,7 +8,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import StatCard from "../../components/ui/StatCard";
 import { formatINR, formatDate } from "../../utils/helpers";
-import { DELIVERY_NAV } from "./DeliveryDashboard";
+import { DELIVERY_NAV } from "../../config/navigation";
 
 const DeliveryEarnings = () => {
   useDocumentTitle("Earnings");

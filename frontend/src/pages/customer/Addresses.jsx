@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import {
-  FaClipboardList, FaHeart, FaKey, FaMapMarkerAlt, FaTachometerAlt, FaUser, FaBell,
   FaPlus, FaEdit, FaTrashAlt, FaHome,
 } from "react-icons/fa";
 import { toast } from "react-toastify";
@@ -10,16 +9,7 @@ import DashboardLayout from "../../components/layout/DashboardLayout";
 import Modal from "../../components/ui/Modal";
 import EmptyState from "../../components/common/EmptyState";
 import { getErrorMessage } from "../../utils/helpers";
-
-const NAV = [
-  { to: "/dashboard", label: "Overview", Icon: FaTachometerAlt, end: true },
-  { to: "/orders", label: "My orders", Icon: FaClipboardList },
-  { to: "/wishlist", label: "Wishlist", Icon: FaHeart },
-  { to: "/profile", label: "Profile", Icon: FaUser },
-  { to: "/addresses", label: "Addresses", Icon: FaMapMarkerAlt },
-  { to: "/change-password", label: "Change password", Icon: FaKey },
-  { to: "/notifications", label: "Notifications", Icon: FaBell },
-];
+import { CUSTOMER_NAV } from "../../config/navigation";
 
 const EMPTY_FORM = { label: "Home", fullAddress: "", landmark: "", city: "", state: "", pincode: "", isDefault: false };
 
@@ -89,7 +79,7 @@ const Addresses = () => {
   };
 
   return (
-    <DashboardLayout title="My Addresses" items={NAV} loading={loading} loaderLabel="Loading addresses...">
+    <DashboardLayout title="My Addresses" items={CUSTOMER_NAV} loading={loading} loaderLabel="Loading addresses...">
       <div className="mb-6 flex justify-end">
         <button onClick={openAdd} className="btn-primary">
           <FaPlus className="text-sm" /> Add address

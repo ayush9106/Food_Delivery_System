@@ -10,7 +10,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import StatusBadge from "../../components/ui/StatusBadge";
 import { formatDate, getErrorMessage } from "../../utils/helpers";
-import { ADMIN_NAV } from "./AdminDashboard";
+import { ADMIN_NAV } from "../../config/navigation";
 
 const STATUSES = ["all", "pending", "approved", "rejected"];
 

@@ -15,19 +15,7 @@ import DashboardLayout from "../../components/layout/DashboardLayout";
 import StatCard from "../../components/ui/StatCard";
 import StatusBadge from "../../components/ui/StatusBadge";
 import { formatINR, formatDate } from "../../utils/helpers";
-
-export const ADMIN_NAV = [
-  { to: "/admin/dashboard", label: "Dashboard", Icon: FaTachometerAlt, end: true },
-  { to: "/admin/users", label: "Users", Icon: FaUsers },
-  { to: "/admin/restaurants", label: "Restaurants", Icon: FaStore },
-  { to: "/admin/foods", label: "Food items", Icon: FaUtensils },
-  { to: "/admin/categories", label: "Categories", Icon: FaListAlt },
-  { to: "/admin/orders", label: "Orders", Icon: FaClipboardList },
-  { to: "/admin/delivery", label: "Delivery partners", Icon: FaMotorcycle },
-  { to: "/admin/coupons", label: "Coupons", Icon: FaTicketAlt },
-  { to: "/admin/offers", label: "Offers", Icon: FaPercent },
-  { to: "/admin/reports", label: "Reports", Icon: FaFileAlt },
-];
+import { ADMIN_NAV } from "../../config/navigation";
 
 const COLORS = ["#f97316", "#ef4444", "#8b5cf6", "#10b981", "#3b82f6", "#f59e0b", "#ec4899", "#14b8a6"];
 

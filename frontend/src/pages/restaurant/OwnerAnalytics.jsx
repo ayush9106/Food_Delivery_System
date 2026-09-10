@@ -13,7 +13,7 @@ import DashboardLayout from "../../components/layout/DashboardLayout";
 import StatCard from "../../components/ui/StatCard";
 import StatusBadge from "../../components/ui/StatusBadge";
 import { formatINR, formatDate } from "../../utils/helpers";
-import { OWNER_NAV } from "./OwnerDashboard";
+import { OWNER_NAV } from "../../config/navigation";
 
 const COLORS = ["#f97316", "#ef4444", "#8b5cf6", "#10b981", "#3b82f6"];
 

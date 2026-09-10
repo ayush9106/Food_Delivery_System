@@ -9,7 +9,7 @@ import useDocumentTitle from "../../hooks/useDocumentTitle";
 import DashboardLayout from "../../components/layout/DashboardLayout";
 import Modal from "../../components/ui/Modal";
 import { formatINR, getErrorMessage } from "../../utils/helpers";
-import { OWNER_NAV } from "./OwnerDashboard";
+import { OWNER_NAV } from "../../config/navigation";
 
 const EMPTY = { restaurantId: "", name: "", description: "", price: "", discountPrice: "", categoryId: "", isVeg: true, isAvailable: true };
 

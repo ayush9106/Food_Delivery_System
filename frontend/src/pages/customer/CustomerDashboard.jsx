@@ -10,16 +10,7 @@ import DashboardLayout from "../../components/layout/DashboardLayout";
 import StatCard from "../../components/ui/StatCard";
 import StatusBadge from "../../components/ui/StatusBadge";
 import { formatINR, formatDate } from "../../utils/helpers";
-
-const NAV = [
-  { to: "/dashboard", label: "Overview", Icon: FaTachometerAlt, end: true },
-  { to: "/orders", label: "My orders", Icon: FaClipboardList },
-  { to: "/wishlist", label: "Wishlist", Icon: FaHeart },
-  { to: "/profile", label: "Profile", Icon: FaUser },
-  { to: "/addresses", label: "Addresses", Icon: FaMapMarkerAlt },
-  { to: "/change-password", label: "Change password", Icon: FaKey },
-  { to: "/notifications", label: "Notifications", Icon: FaBell },
-];
+import { CUSTOMER_NAV } from "../../config/navigation";
 
 const CustomerDashboard = () => {
   useDocumentTitle("My Dashboard");
@@ -46,7 +37,7 @@ const CustomerDashboard = () => {
   }, []);
 
   return (
-    <DashboardLayout title="My Dashboard" items={NAV} loading={loading} loaderLabel="Loading dashboard...">
+    <DashboardLayout title="My Dashboard" items={CUSTOMER_NAV} loading={loading} loaderLabel="Loading dashboard...">
       {stats && (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           <StatCard label="Total orders" value={stats.totalOrders} icon={<FaShoppingBag />} accent="orange" />
